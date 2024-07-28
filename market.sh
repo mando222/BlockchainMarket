@@ -99,9 +99,12 @@ install_dependencies() {
     cd ..
 
     # Install Node.js dependencies
-   echo "Installing Node.js dependencies..."
+    echo "Installing Node.js dependencies..."
     cd frontend
     if command_exists npm; then
+        ensure_browserslist_config
+        echo "Installing React, Material-UI, and Keplr dependencies..."
+        npm install @mui/material @emotion/react @emotion/styled @mui/icons-material @keplr-wallet/types
         if ! npm install; then
             echo "Error: Failed to install Node.js dependencies. Please check your internet connection and try again."
             exit 1

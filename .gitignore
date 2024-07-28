@@ -291,3 +291,6 @@ gradle-app.setting
 .classpath
 
 # End of https://www.toptal.com/developers/gitignore/api/go,react,reactnative
+
+# package-lock
+frontend/package-lock.json
